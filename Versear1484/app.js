@@ -12,7 +12,7 @@ function renderTodos() {
 
         const text = document.createElement('text');
         //text要素にtextを代入する
-         text.textContent = too.text; 
+         text.textContent = todo.text; 
 
         //deleteボタンの追加
         const delBtn = document.createElement('button');
