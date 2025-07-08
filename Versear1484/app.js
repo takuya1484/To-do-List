@@ -27,7 +27,11 @@ function renderTodos() {
             renderTodos();
         });
 
-        
+         const cheBox = document.createElement('input');
+         cheBox.type = 'checkbox';
+
+        //小要素に追加
+        li.appendChild(cheBox);
         li.appendChild(text);
         li.appendChild(delBtn);
         todoListEl.appendChild(li);
