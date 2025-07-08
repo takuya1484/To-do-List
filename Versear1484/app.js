@@ -11,6 +11,9 @@ function renderTodos() {
         const li = document.createElement('li');
 
         const text = document.createElement('text');
+
+        //text要素にtextを代入する
+       
          text.textContent = todo.text; 
 
         //削除ボタン
