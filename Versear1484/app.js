@@ -7,26 +7,27 @@ let todos = [];
 function renderTodos() {
     todoListEl.innerHTML = '';
     todos.forEach((todo, index) => {
-        //li要素内にtodoの内容を追加していく
+      
         const li = document.createElement('li');
 
         const text = document.createElement('text');
-        //text要素にtextを代入する
-        
 
-        //deleteボタンの追加
+        //text要素にtextを代入する
+       
+         text.textContent = todo.text; 
+
+        //削除ボタン
         const delBtn = document.createElement('button');
-        //ボタンのテキストを設定
+
         delBtn.textContent = '削除';
-        //delete-btnクラスの追加
         delBtn.classList.add('delete-btn');
-        //ボタンが押された時の削除処理
+        
         delBtn.addEventListener('click', () => {
             todos.splice(index, 1);
             renderTodos();
         });
 
-        //それぞれを子要素として追加する
+        
         li.appendChild(text);
         li.appendChild(delBtn);
         todoListEl.appendChild(li);
@@ -34,14 +35,14 @@ function renderTodos() {
 }
 
 function addTodo() {
-    // テキストボックスから取得
-    const text = inputEl.value.trim();
-    //テキストが空白でなければ
+    
+    const text = inputEl.value.trim(); // テキストボックスから取得
+    
     if (text) {
         todos.push({ text: text });
         renderTodos();
-        //テキストボックスを空白にする
-        inputEl.value = '';
+        
+        inputEl.value = ''; //テキストボックスを空白にする
     }
 }
 

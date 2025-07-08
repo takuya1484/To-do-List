@@ -15,6 +15,7 @@
   h1{
     text-align: center;
     text-decoration: underline;
+    font-style: italic;
   }
   .input-area input[type="text"] {
     flex: 1;
